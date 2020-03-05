@@ -21,6 +21,13 @@ In the main we receive the arguments passed by the user.
     name_page = sys.argv[2]
 ```
 
+We give a request on the URL here and move on to a variable.
+Then we pass variable.content to the function.
+```py
+req = requests.get(url)
+create_copy_page( req.content, name_page)
+```
+
 This function receives the contents of the page, and using the decode ('utf-8'), it creates a file with the last name and writes the content inside.
 ```py
 def create_copy_page(create_copy, name_page):
